@@ -205,8 +205,9 @@ function main() {
 	//Display a standard Open File dialog box.
 	var myDoc,
 		myPDFFile = File.openDialog("Choose a PDF File"),
-		offset = prompt('offset', 210) || 148,
-		count = prompt('page count', 8) || 4;
+        //edit these lines for your own defaults. eg 210 and 8 are defaults, but if left blank the second number applies (saves typing)
+		offset = prompt('offset', 210) || 148.5,
+		count = prompt('page count', 16) || 36;
 	if (myPDFFile) {
 		myDoc = getDoc(app.documents.length);
 		myPlacePDF(myDoc.doc, myDoc.getPage(), myPDFFile, offset, count);
