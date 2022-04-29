@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Booklet</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        
+            p {
+                margin: .5em 0;
+            }
+            body {
+                margin: 1em 3em;
+            }
+            h4 {
+                margin: 0;
+            }
+            ul {
+                display: flex;
+                justify-content: space-around;
+                background: rgb(255, 255, 200);
+            }
+            li {
+                list-style: none;
+            }
+        
+        </style>
+
+    </head>
+    <body>
+<h3>Import PDF pages into InDesign for printing in booklet form. (Saddle Stich imposition format)</h3>
+<p>Typical usage is for printing of documents in <em>portrait</em> booklet form using an A4 (or gosh you're posh A3) printer instead of having a fistful of flat sheets to shuffle through. (Any landscape documents are not good candidates for imposition and best printed as is.) International Paper Sizes and millimetres are assumed. Now, about sucking eggs...</p>
+        <p>The InDesign document should be set to the twice the width of your PDF file. (File:Properties)</p>
+    <p>For a PDF document size of A5 create a new document to A4 landscape, for an A4 document, A3 landscape. Run the script. Saving the InDesign document is optional. Set SCALE TO FIT in the print dialog box along with correct orientation etc.. before printing.</p>
+    <p>Custom sizes are easily supported. For a portrait PDF document of 190 x 250 the DOCUMENT SIZE would need be 380 x 250.
+        If you set a preset - or select existing - in the new Document dialog box on creating a new document there is no need to invoke new Document for subsequent PDF documents you intend to print.</p>
+<p>If all goes well simply fold the ouputted sheets in half. Serving suggestion. A loose fitting rubberband may help with binding.</p>
+<p>If you have a manual of say 200 pages(pp) you would be advised to split the document into no less than five sections of 40 pages, ten sheets per section. More typically this would be split per chapter (or two). Any full version of Acrobat allows you to extract a range of <a href="https://helpx.adobe.com/uk/acrobat/using/manipulating-deleting-renumbering-pdf-pages.html">pages</a> to save as a separate document.
+</p>
+<p>If using Preview on a Mac:
+First, open up the PDF file in <a href="http://hints.macworld.com/article.php?story=2002030109023743#:~:text=First%2C%20open%20up%20the%20PDF,to%20save%20the%20extracted%20portion.">Preview</a>. Then select Print, and under Pages choose the range of pages you need to extract, ie (40-79). Then click Preview. Those pages will open up in a new window and you can select Save As from the file menu to save the extracted portion. <strong>But remember</strong>:</p>
+<h4>THE PDF TO IMPORT MUST HAVE PAGES IN MULTIPLES OF 4</h4>
+<p>To round up to a multiple of 4 INSERT BLANK pages with Acrobat or <a href="https://support.apple.com/en-us/HT202945">Preview</a> other PDF editors are available.</p>
+<p>Here are links to <a href="1pp.pdf">1</a>, <a href="2pp.pdf">2</a> and <a href="3pp.pdf">3</a> page blank A5 Portrait pdf's which can be inserted at the end of your print-ready pdf.
+<em>The size of these pages does not need to match <strong>your</strong> PDF document</em>. The blanks are just there to allow the script to generate the correct page count in InDesign.</p>
+<p>On running the Script there will be FOUR PROMPTS.
+The first is for the OFFSET of the right-hand pages (defaults to 0 for left hand pages) this has a default of 210 but override at will. Leaving blank (deleting 210) will default to 148.5.
+The second prompt is for the PAGE COUNT, default is 16 leave blank for 40, override otherwise.</p><p>
+        After the prompt to place pages (accept the default) the CROP AREA needs to be set, this defaults to Media, but depending on how the pdf was <a href="https://www.prepressure.com/pdf/basics/page-boxes">produced</a>, the setting may need to be one of:</p>
+<ul><li>Art</li><li>Bleed</li><li>Crop</li><li>Media</li><li>Trim</li></ul>
+        <p>The script will run and generate the print ready InDesign document.</p>
+        <p>The scriot needs to saved as a <a href="assets/booklet.jsx">jsx</a> file in the following location (on a mac)</p>
+        <p>/Applications/Adobe InDesign */Scripts/Scripts Panel/Samples/JavaScript</p>
+        <p>It will appear in</p>
+        <script src="booklet.js"></script>
+    </body>
+</html>
