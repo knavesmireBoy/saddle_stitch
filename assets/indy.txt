@@ -1,0 +1,11 @@
+This post is purely for Adobe InDesign users who do not have some form of imposition plug-in.
+I've written a script that imposes a PDF document in a "saddle-stitch" format into InDesign. Useful if you would rather print out that article or that manual to read in the deckchair rather than online, an A5 booklet being easier to handle than a wad of A4 sheets.
+InDesign shipped with a PlaceMultipagePDF.jsx script from which this was adapted.
+
+Here's the link.
+https://knavesmireboy.github.io/saddle_stitch/
+and these links may prove helpful
+https://creativepro.com/how-to-install-scripts-in-indesign/
+https://helpx.adobe.com/uk/indesign/using/scripting.html
+https://fileinfo.com/extension/jsx
+https://www.indiscripts.com/pages/theunis
